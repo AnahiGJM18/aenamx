@@ -47,15 +47,15 @@ SELECT
         "ZGRUPOAAEE"                            AS "ZGRPAAEE",                               -----Grupo Aropuertos
         "WERKS"                                 AS "0PERS_AREA",                              -----División de personal
         "BTRTL"                                 AS "0PERS_SAREA",                            -----Subdivisión de personal
-        "DELFLG"                                AS "0RF_DEL_IND",                             -----Indicador de borrado
+        "DELFLG"                                AS "0RF_DEL_IND",                            -----Indicador de borrado
         YEAR(TO_DATE("EVDAT",'YYYYMMDD'))       AS "0CALYEAR",                               -----Año natural
         SUBSTRING(TO_DATE("EVDAT",'YYYYMMDD'),1,7) AS "0CALMONTH",                           -----Año natural/Mes           
         MONTH(TO_DATE("EVDAT",'YYYYMMDD'))      AS "0CALMONTH2",                             -----Mes natural
         QUARTER(TO_DATE("EVDAT",'YYYYMMDD'))    AS "0CALQUARTER",                            -----Año natual/Trimestre
         "ZZCEN_PRL"                             AS "ZCNTPRL",                                -----Centro de trabajo de PRL
         ---RUTINA
-        'xx'                                    AS "0PAYRL_AREA",                           --TODO: Implementar rutina de 0PAYRL_AREA
-        CAST("ZEDAD" AS INTEGER)                 AS "0AGE",                                   -----Edad en años
+        'xx'                                    AS "0PAYRL_AREA",                            -- #TODO: Implementar rutina de 0PAYRL_AREA
+        CAST("ZEDAD" AS INTEGER)                AS "0AGE",                                   -----Edad en años
         "ZGENERO"                               AS "0GENDER",                                -----Sexo
         "ZAREAPERS"                             AS "ZARPERS",                                -----Area de personal
         "Z_EHS_HOR_TRA"                         AS "ZHORTRAB",                               -----Hora de trabajo
