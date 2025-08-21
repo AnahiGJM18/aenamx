@@ -1,3 +1,19 @@
+-------------------------------------------------------------------------------
+--                                                      T-Systems Mexico
+--
+--
+-- Name:    ECC_HL_HR_PersonasImplicadas_SV
+--
+-- Desc:    Contiene el detalle de Siniestralidad. Personas 
+--          Implicadas(ZEIH_DS2) procedentes del módulo de RRHH
+--
+--          Reimplementación de desarrollo de BW
+--              Transformación RSDS Z_PRESBI_SINIES QSA010 -> ODSO ZEIH_DS2
+--
+--  Author: 
+--          Anahí G. Jara Martínez
+--
+-------------------------------------------------------------------------------
 SELECT
         CAST("RECN_IAL" AS INTEGER)             AS "ZRECNIAL",                             -----Numero de registro en log de accidente
         CAST("RECN_IP" AS INTEGER)              AS "ZRECNIP",                              -----Numero de registro de la persona implicada
