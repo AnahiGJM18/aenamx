@@ -22,7 +22,7 @@ SELECT
     LPAD("AUFNR", 12, '0')                  AS "ORDEN",                  ----Código Actuación
     "KSTAR"                                 AS "ZCLASECTE",              ----Cuenta Contable
     "SWG"                                   AS "IMPREALN",               ----Importe Real Año N
-    "WAERS"                                 AS "0CURRENCY",              ----Moneda
+    "WAERS"                                 AS "0CURRENCY",              ---- Clave de moneda
     "GSBER"                                 AS "DIVISION",               ----División
     "KTOPL"                                 AS "0CHRT_ACCTS",            ----Plan de cuentas
     REPLACE(UPPER("ZZXREF3"), ' ', '')      AS "PARTGTO",                ----Partida de Gastos(RUTINA)

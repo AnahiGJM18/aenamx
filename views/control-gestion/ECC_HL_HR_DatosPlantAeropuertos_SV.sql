@@ -17,15 +17,15 @@
 SELECT 
     "MANDT",                                                                            ---Mandante
     TO_DATE("F_PLANTILLA", 'YYYYMMDD')                  AS "F_PLANTILLA",               ---Inicio de la validez
-    "WERKS"                                             AS "0PERS_AREA",                ----División del personal
+    "WERKS"                                             AS "0PERS_AREA",                ----División de personal
     "GSBER"                                             AS "ZDIVISION",                 ---División
-    TO_INTEGER("P_MENS")                                AS "ZPLANTIL",                  ---Punteron interno
-    TO_INTEGER("P_MED_MENS")                            AS "ZPLANMENS",                 ---Punteron interno
-    "CEN_PRL"                                           AS "ZCNTPRL",                   ---Código de centro de prevención
+    TO_INTEGER("P_MENS")                                AS "ZPLANTIL",                  ---Plantilla mensual
+    TO_INTEGER("P_MED_MENS")                            AS "ZPLANMENS",                 ---Plantilla Media Mensual
+    "CEN_PRL"                                           AS "ZCNTPRL",                   ---Centro trabajo PRL
     "BTRTL"                                             AS "0PERS_SAREA",               ---Subdivisión de personal
     "GRUPOAE"                                           AS "ZGRPAAEE",                  ---Grupo Aeropuertos
-    SUBSTRING(TO_DATE("F_PLANTILLA", 'YYYYMMDD'),1,7)   AS "0CALMONTH",                 ---Año natural/Mes
-    MONTH(TO_DATE("F_PLANTILLA", 'YYYYMMDD'))           AS "0CALMONTH2",                ---Mes natural
-    YEAR(TO_DATE("F_PLANTILLA", 'YYYYMMDD'))            AS "0CALYEAR"                   ---Año natural
+    SUBSTRING("F_PLANTILLA", 1,6)                       AS "0CALMONTH",                 ---Año natural/Mes
+    SUBSTRING("F_PLANTILLA", 5, 2)                      AS "0CALMONTH2",                ---Mes natural
+    SUBSTRING("F_PLANTILLA", 1, 4)                      AS "0CALYEAR"                   ---Año natural
 FROM 
     "ECC_IL_HR_PMensualAepto_RT"
