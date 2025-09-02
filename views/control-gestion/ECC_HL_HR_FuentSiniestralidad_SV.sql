@@ -31,7 +31,7 @@ SELECT
         CASE 
             WHEN "Z_EHS_FEC_INVES" = '00000000' THEN NULL
             ELSE  TO_DATE("Z_EHS_FEC_INVES",'YYYYMMDD')   
-            END                                 AS "Z_EHS_FEC_INVES" ,                     -----Fecha de investigación                                      
+            END                                 AS "ZF_INVIAL" ,                           -----Fecha de investigación                                      
         SUBSTRING("Z_EHS_AGNT_MAT",6)           AS "ZAGNMAT",                              -----Agente Material
         SUBSTRING("Z_EHS_ECH_ANO",6)            AS "ZECHANO",                              -----Hecho anormal que desencadeno el accidente
         "IALPCAT"                               AS "0EHS_IACA",                            -----Tipo de accidente
@@ -61,7 +61,7 @@ SELECT
         "ZREGION"                               AS "ZDREGION",                               -----Dirección Regional
         "ZREGION"                               AS "ZZONAAAEE",                              -----Zona de Aeropuertos
         "ZGRUPOAAEE"                            AS "ZGRPAAEE",                               -----Grupo Aropuertos
-        "WERKS"                                 AS "0PERS_AREA",                              -----División de personal
+        "WERKS"                                 AS "0PERS_AREA",                             -----División de personal
         "BTRTL"                                 AS "0PERS_SAREA",                            -----Subdivisión de personal
         "DELFLG"                                AS "0RF_DEL_IND",                            -----Indicador de borrado
         YEAR(TO_DATE("EVDAT",'YYYYMMDD'))       AS "0CALYEAR",                               -----Año natural
