@@ -64,6 +64,5 @@ SELECT
     "ZHORTRAB",
     "ZGRADLES",
     "ZGRACDTE"
-    
 FROM
     "ECC_HL_HR_PersonasImplicadas_SV"

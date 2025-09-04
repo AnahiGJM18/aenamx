@@ -2,13 +2,13 @@
 --                                                      T-Systems Mexico
 --
 --
--- Name:    ECC_HL_HR_--------------_SV
+-- Name:    ECC_HL_HR_GastosActuacionsinCECO_SV
 --
 -- Desc:    Contiene el detalle de Órdenes: Costes reales mediante extracción
 --          Delta(ZCO_OM_OPA_6_S4)
 --
 --        Reimplementación de desarrollo de BW
---           Transformación 
+--           Transformación CUBE GASCT_BA -> CUBE PGASCT_B
 --
 --  Author: 
 --          Anette Salazar Flores
@@ -39,7 +39,9 @@ SELECT
     ''                                  AS "CECO",                  --CECO
     ---3 campos que viene de uno solo
     "ZORDENOR"                          AS "ZORDENOR",              --Código de Actuación Origen R/3  
-    "0CHRT_ACCTS"
-
+    "0CHRT_ACCTS"                       AS "0CHRT_ACCTS",           --Plan de cuentas 
+    "ZCLASECTE"                         AS "CUENTA",                 --Cuenta contable 
+    "ZORDENOR"                          AS "CUENTAORI",             --Código de actuación Prigen R/3
+    "XXXXXXXXXXX"                       AS "IMPREALN"               --#TODO Currency DE Importe Real Año              
 FROM "ECC_HL_HR_Partidas_Individuales_SV"
 
