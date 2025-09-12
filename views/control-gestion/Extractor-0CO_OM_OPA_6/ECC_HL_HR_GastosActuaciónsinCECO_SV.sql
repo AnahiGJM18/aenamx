@@ -8,7 +8,7 @@
 --          Delta(ZCO_OM_OPA_6_S4)
 --
 --        Reimplementación de desarrollo de BW
---           Transformación CUBE GASCT_BA -> CUBE PGASCT_B
+--           Transformación TRCS ZCO_OM_OPA_6_S4 -> CUBE GASCT_BA
 --
 --  Author: 
 --          Anette Salazar Flores
@@ -16,7 +16,6 @@
 -------------------------------------------------------------------------------
 SELECT 
     ---3 RUTINAS
-    "0FISCPER"                          AS "0FISCPER",              --Ejercicio/Período
     CASE
         WHEN SUBSTRING("0FISCPER", 5, 2) > 12
         THEN CONCAT(SUBSTRING("0FISCPER", 1, 4), '12')
@@ -27,7 +26,7 @@ SELECT
         WHEN SUBSTRING("0FISCPER", 5, 2) > 12
         THEN '12'
         ELSE SUBSTRING("0FISCPER", 1, 4)
-        END                             AS "OCALMONTH2",
+        END                             AS "OCALMONTH2",            --Mes natural
     SUBSTRING("0FISCPER", 1, 4)         AS "0CALYEAR",              --Año natural    
     "DIVISION"                          AS "DIVISION",              --División    
     "0CO_AREA"                          AS "0CO_AREA",              --Sociedad CO
@@ -40,7 +39,7 @@ SELECT
     ---3 campos que viene de uno solo
     "ZORDENOR"                          AS "ZORDENOR",              --Código de Actuación Origen R/3  
     "0CHRT_ACCTS"                       AS "0CHRT_ACCTS",           --Plan de cuentas 
-    "ZCLASECTE"                         AS "CUENTA",                 --Cuenta contable 
+    "ZCLASECTE"                         AS "CUENTA",                --Cuenta contable 
     "ZORDENOR"                          AS "CUENTAORI",             --Código de actuación Prigen R/3
     "XXXXXXXXXXX"                       AS "IMPREALN"               --#TODO Currency DE Importe Real Año              
 FROM "ECC_HL_HR_Partidas_Individuales_SV"

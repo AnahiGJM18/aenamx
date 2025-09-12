@@ -15,7 +15,7 @@
 --
 -------------------------------------------------------------------------------
 SELECT 
-    --"MANDT",
+
     "BUKRS"                              AS "0CO_AREA",                  ----Sociedad CO
     "ANLKL"                              AS "ZCLASEAF",                  ----Clase de activo fijo
     "GSBER"                              AS "DIVISION",                  ----División
@@ -27,12 +27,12 @@ SELECT
     "PERGRP"                             AS "ZGRPCTROL",                 ----Grupo de control de períodos
     "LNRAN"                              AS "ZNUMAF",                    ----N° actual de partida individual
     YEAR("GJAHR")                        AS "0CALYEAR",                  ----Año natural
---??"BUKRS"                              AS "0CHRT_ACCTS",               ----Plan de cuentas / no es rutina
+    "BUKRS"                              AS "0CHRT_ACCTS",               ----Plan de cuentas / no es rutina
     "KTANSW"                             AS "CUENTA",                    ----Cuenta Contable
     "ANLN2"                              AS "SUBNUM",                    ----Subnumero AF
     "KFZKZ"                              AS "MPEXPEDIE",                 ----Número de Expediente
-    CAST("ANBTR" AS INTEGER) / 100       AS "IMPORTE",                   ----Importe Real Activo / Vienen solo nulos
-    'EUR'                                AS "0CURRENCY",                 ----Clave de moneda / "viene de otra tabla" / es constante
+    **CAST("ANBTR" AS INTEGER) / 100       AS "IMPORTE",                   ----Importe Real Activo / Vienen solo nulos
+    'EUR'                                AS "0CURRENCY",                 ----#TODO Clave de moneda / "viene de otra tabla" / es constante
     "ANLN1"                              AS "MPACFIJ",                   ----Activo fijo
     "INVNR"                              AS "ZPROYEEPA"                  ----Proyecto Epa
 FROM "ECC_IL_HR_VewZMPRESAFI_RT"
