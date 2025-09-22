@@ -2,7 +2,7 @@
 --                                                      T-Systems Mexico
 --
 --
--- Name:    ECC_HL_HR_SiniestralidadCube_SV
+-- Name:    ECC_HL_HR_SiniestralidadHistorico_SV
 --
 -- Desc:    Contiene el detalle de Siniestralidad. Personas 
 --          Implicadas(Z_PRESBI_SINIES) procedentes del módulo de RRHH
@@ -56,12 +56,13 @@ SELECT
     "ZTPLUGAR",                         --Tipo de lugar
     "ZTPTRABJ",                         --Tipo de trabajo 
     'ZSTAT1',                           --Status según las necesidades individuales del cliente #TODO:Incl
-    "ZCNTPRL",
-    "0AGE",
-    "0GENDER",
-    "ZARPERS",
-    "ZHORTRAB",
-    "ZGRADLES",
-    "ZGRACDTE"
+    "ZCNTPRL",                          --Centro de trabajo PRL
+    "0AGE",                             --Edad en años
+    "0GENDER",                          --Sexo
+    "ZARPERS",                          --Area de Personal
+    "ZHORTRAB",                         --Hora de trabajo 
+    "ZGRADLES",                         --Grado de Lesión
+    'ZWEEKDAY',                          --Día de la semana #TODO: Día de la semana
+    "ZGRACDTE"                          --Gravedad de Accidente
 FROM
     "ECC_HL_HR_PersonasImplicadas_SV"

@@ -21,7 +21,7 @@ SELECT
     "GSBER"                              AS "DIVISION",                  ----División
     "KOSTL"                              AS "CECO",                      ----
     "BWASL"                              AS "ZCLASEMOV",                 ----Clase de movimiento activos fijos
-    'k4'                                 AS "0FISCVARNT",                ----Variante de ejercicio
+    'k4'                                 AS "0FISCVARNT",                ----Variante de ejercicio #TODO: Tabla de datos maestros T009
     TO_INTEGER("AFABE")                  AS "AREAVALOR",                 ----Area valoracion AF
     "BELNR"                              AS "ZDOCCONT",                  ----Número de documento contable
     "PERGRP"                             AS "ZGRPCTROL",                 ----Grupo de control de períodos
@@ -31,8 +31,10 @@ SELECT
     "KTANSW"                             AS "CUENTA",                    ----Cuenta Contable
     "ANLN2"                              AS "SUBNUM",                    ----Subnumero AF
     "KFZKZ"                              AS "MPEXPEDIE",                 ----Número de Expediente
-    **CAST("ANBTR" AS INTEGER) / 100       AS "IMPORTE",                   ----Importe Real Activo / Vienen solo nulos
+    CAST("ANBTR" AS INTEGER) / 100       AS "IMPORTE",                   ----Importe Real Activo / Vienen solo nulos
     'EUR'                                AS "0CURRENCY",                 ----#TODO Clave de moneda / "viene de otra tabla" / es constante
     "ANLN1"                              AS "MPACFIJ",                   ----Activo fijo
+    'xxxxxxxxx'                          AS "MPVIDUTIL",                 -----Vida util #TODO Identificar de donde viene el campo
+    'xxxxxxxxx'                           AS "ZGAFFINV",                ---#TODO:PENDIENTE 
     "INVNR"                              AS "ZPROYEEPA"                  ----Proyecto Epa
 FROM "ECC_IL_HR_VewZMPRESAFI_RT"
