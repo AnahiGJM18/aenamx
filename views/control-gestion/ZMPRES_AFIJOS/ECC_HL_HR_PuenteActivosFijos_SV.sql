@@ -31,7 +31,7 @@ SELECT
     "MPEXPEDIE",                            ----Número de Expediente
     "MPACFIJ",                              ----Activo fijo
     "ZPOSICIO2",                            ---Posición para Distribuir por CeCo,Cuenta BW
-    "OCHRT_ACCTS",                          ----Plan de cuentas #TODO: Es una rutina ocupa la tabla de Division 
+    "OCHRT_ACCTS",                          ----Plan de cuentas
     "IMPORTE",                              ----Importe Real Activo 
     "ZGAFFINV",                            ----Fecha de fin de inversiones 
     "0CURRENCY",                            ----#TODO Clave de moneda / "viene de otra tabla" / es constant

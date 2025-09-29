@@ -1,3 +1,19 @@
+-------------------------------------------------------------------------------
+--                                                      T-Systems México
+--
+--
+-- Name:    ECC_HL_HR_HorasExtras_SV
+--
+-- Desc:    Contiene el detalle de Activos Fijos procedentes del
+--          módulo de RRHH
+--
+--          Reimplementación de desarrollo de BW
+--              Transformación RSDS ZBWHR_ZNLIS99_CORR QSA010 -> ODSO ZHROHE
+--
+--  Author: 
+--          Anette Salazar Flores and Anahi G Jara Martínez
+--
+-------------------------------------------------------------------------------
 SELECT 
     --"MANDT",
     "PERNR"                                                                AS "ZHRPERNR",               ----Número de personal
