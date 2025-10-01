@@ -1,3 +1,19 @@
+-------------------------------------------------------------------------------
+--                                                      T-Systems México
+--
+--
+-- Name:    ECC_HL_HR_GastosViaje_SV
+--
+-- Desc:    Contiene el detalle de Activos Fijos procedentes del
+--          módulo de RRHH
+--
+--          Reimplementación de desarrollo de BW
+--              Transformación RSDS ZBWHR_GV_CORR QSA010 -> ODSO ZHRDGV
+--
+--  Author: 
+--          Anette Salazar Flores and Anahi G Jara Martínez
+--
+-------------------------------------------------------------------------------
 SELECT
     "FPPER"                         AS "ZHRFPPER",      ----Periodo para de la nómina
     "EXBEL"                         AS "ZHREXBEL",      ----Número de asignación
